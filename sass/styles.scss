@@ -1,12 +1,18 @@
+@import './header';
 html, * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-align: center;
+    //border: 1px solid black;
+    font-family: sans-serif;
 }
 body {
     display: inline-block;
     min-width: 320px;
     max-width: 2000px;
-    background-color: aquamarine;
+    width: 100%;
+}
+.inl-block {
+    display: inline-block;
 }
