@@ -1,0 +1,64 @@
+@import "vars.scss";
+
+.splash{
+    background-color: #333333;
+    padding: 140px 20px 70px 20px;
+    color: #FFFFFF;
+    text-align: left;
+    @media (min-width: $breakpoint) {
+        padding: 280px 0 120px 20%;
+    }
+    &__small-title {
+        font-weight: 700;
+        font-size: 13px;
+        text-align: left;line-height: 18px;
+        letter-spacing: 2.8px;
+        @media (min-width: $breakpoint) {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 15px;
+            letter-spacing: 2.8px;
+        }
+    }
+    &__big-title {
+        margin: 40px 0;
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 60px;
+        text-align: left;
+        letter-spacing: -1.2px;
+        @media (min-width: $breakpoint) {
+            font-family: 'Old Standard TT';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 120px;
+            line-height: 130px;
+            letter-spacing: -3.6px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.button {
+    width: 217px;
+    height: 60px;
+    border: 2px solid #FFFFFF54;
+    padding: 22px 0;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    margin: 24px 0;
+    &--active {
+        border: 0px none transparent;
+        background-color: #BEAD8E;
+    }
+    &--separated {
+        margin-right: 30px;
+    }
+}

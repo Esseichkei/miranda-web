@@ -10,7 +10,7 @@
 .fsections {
     @media (min-width: $breakpoint) {
         display: flex;
-        padding-top: 100px;
+        padding: 100px 0;
         justify-content: center;
         align-items: flex-start;
         &__description {
