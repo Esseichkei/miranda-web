@@ -1,0 +1,133 @@
+.footer {
+    background-image: url("../img/footer_bg.svg");
+    width: 100%;
+    &__body {
+        padding: 20px;
+    }
+}
+.ftitle{
+    margin: 12px 0 32px 0;
+    &__big-h {
+        display: inline-block;
+        background-color: #BEAD8E;
+        color: #FFFFFF;
+        font-size: 40px;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        padding: 19px 0;
+        font-weight: 700;
+        vertical-align: top;
+        box-shadow: 0px 14px 24px rgba(139, 139, 139, 0.15);
+    }
+    &__name {
+        display: inline-block;
+        padding-left: 30px;
+        padding-top: 11px;
+        text-align: left;
+        font-size: 26px;
+        vertical-align: top;
+    }
+}
+.desc-description {
+    margin: 47px 0 32px 0;
+    color: #777777;
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+.desc-icons{
+    text-align: left;
+    &__child {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        margin: 10px 5px;
+        background-color: #F8F8F8;
+        background-size: 24px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &--active {
+            background-color: #BEAD8E;
+        }
+    }
+}
+.icon-fb {
+    background-image: url("../../img/facebook.svg");
+}
+.icon-tw {
+    background-image: url("../../img/twitter.svg");
+}
+.icon-be {
+    background-image: url("../../img/be_icon.svg");
+}
+.icon-li {
+    background-image: url("../../img/linkedin.svg");
+}
+.icon-yt {
+    background-image: url("../../img/youtube.svg");
+}
+.fsections{
+    &__services{
+        margin:32px 0px;
+    }
+}
+.footer-heading {
+    margin: 24px 0;
+    text-align: left;
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+}
+.footer-servlist{
+    list-style: none;
+    &__item {
+        display: inline-block;
+        width: 50%;
+        text-align: left;
+        color: #777777;
+        font-size: 16px;
+        padding: 16px 0;
+    }
+}
+.fcontact{
+    text-align: left;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    &__img {
+        width: 40px;
+        height: 40px;
+        vertical-align: top;
+        margin: 10px;
+    }
+    &__details {
+        margin-left: 8px;
+        padding-top: 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+.fcontact-name {
+    text-align: left;
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.fcontact-number{
+    color: #777777;
+    font-size: 14px;
+}
+.fby {
+    background-color: #F8F8F8;
+    width: 100%;
+    &__copyright, &__tos {
+        padding: 16px 20px;
+        font-weight: 700;
+        text-align: left;
+    }
+}
