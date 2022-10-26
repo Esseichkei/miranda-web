@@ -106,7 +106,7 @@
     height: 30px;
     font-size: 14px;
     &::-webkit-calendar-picker-indicator {
-        filter: invert(0.6);
+        filter: invert(0.6) sepia(1);
         transform: scale(1.2);
         margin-right: 10px;
     }
