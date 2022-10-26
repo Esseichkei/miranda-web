@@ -64,6 +64,9 @@
     &--avail-checker{
         width: 250px;
         margin: 42px 0 0 0;
+        @media (min-width: $breakpoint) {
+            margin: 42px 0 0 6%;
+        }
     }
 }
 
@@ -74,6 +77,15 @@
     text-align: left;
     &__form{
         text-align: left;
+        @media (min-width: $breakpoint) {
+            margin: 20px;
+            width: 30%;
+        }
+    }
+    @media (min-width: $breakpoint) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 .ac-label {
@@ -97,5 +109,8 @@
         filter: invert(0.6);
         transform: scale(1.2);
         margin-right: 10px;
+    }
+    @media (min-width: $breakpoint) {
+        width: 100%;
     }
 }
