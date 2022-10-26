@@ -61,4 +61,41 @@
     &--separated {
         margin-right: 30px;
     }
+    &--avail-checker{
+        width: 250px;
+        margin: 42px 0 0 0;
+    }
+}
+
+.avail-checker{
+    background-color: #222222;
+    padding: 36px 20px;
+    color: #FFFFFF;
+    text-align: left;
+    &__form{
+        text-align: left;
+    }
+}
+.ac-label {
+    display: block;
+    text-align: left;
+    margin: 20px 0;
+    font-weight: 700;
+}
+.ac-input {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border: 0px none transparent;
+    border-bottom: 2px solid #BEAD8E;
+    color: #FFFFFF;
+    flex-direction: row-reverse;
+    height: 30px;
+    font-size: 14px;
+    &::-webkit-calendar-picker-indicator {
+        filter: invert(0.6);
+        transform: scale(1.2);
+        margin-right: 10px;
+    }
 }
