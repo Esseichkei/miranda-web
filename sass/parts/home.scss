@@ -120,6 +120,7 @@
     @media (min-width: $breakpoint) {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: center;
     }
     &__bg {
         z-index: -1;
@@ -138,10 +139,11 @@
         margin: 60px 20px;
         text-align: left;
         @media (min-width: $breakpoint) {
+            margin-left: 76px;
             margin-top: 230px;
             max-width: 500px;
             min-width: 410px;
-            width: 40%;
+            width: 50%;
         }
     }
     &__items {
@@ -187,7 +189,6 @@
         font-weight: 400;
         font-size: 80px;
         line-height: 90px;
-        text-align: center;
         letter-spacing: -2.4px;
         color: #111111;
     }
