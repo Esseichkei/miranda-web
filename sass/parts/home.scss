@@ -207,7 +207,8 @@
     }
 }
 .ui-item {
-    margin: 45px 0;
+    width: 300px;
+    margin: 45px auto;
     @media (min-width: $breakpoint) {
         margin: 120px 15px;
     }
