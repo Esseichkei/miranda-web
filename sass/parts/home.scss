@@ -283,3 +283,17 @@
     background-color: #222222;
     color: #FFFFFF;
 }
+
+.rooms {
+    position: relative;
+    margin: 30px 0;
+    &__bg {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 200px; //placeholder
+        height: 200px; //placeholder
+        background-color: #E5E5E5;
+    }
+}
