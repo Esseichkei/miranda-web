@@ -287,13 +287,118 @@
 .rooms {
     position: relative;
     margin: 30px 0;
-    &__bg {
-        z-index: -1;
+    &__small-title{
+        color: #777777;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 15px;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+    }
+    &__big-title{
+        font-family: 'Old Standard TT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: -1.2px;
+        color: #222222;
+        width: 350px;
+        display: inline-block;
+        margin: 24px auto;
+    }
+}
+.swiper {
+    width: 100%;
+    height: 440px;
+}
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &__iconrow {
+        display: inline-block;
+        padding: 11px 6px;
+        height: 40px;
+        background-color: #FFFFFF;
+    }
+    &__img {
         position: absolute;
-        left: 0;
         width: 100%;
-        top: 200px; //placeholder
-        height: 200px; //placeholder
-        background-color: #E5E5E5;
+        height: 244px;
+        background-size: cover;
+        top: 20px;
+        left: 0;
+        z-index: -1;
+    }
+    &__body {
+        position: relative;
+        top: 204px;
+        background-color: #FFFFFF;
+        width: 335px;
+        margin: 0 auto;
+        padding: 19px 24px;
+    }
+}
+.iconrow-icon {
+    width: 16px;
+    margin: 0 18px;
+    height: auto;
+}
+.sb-title {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1.2px;
+    color: #222222;
+}
+.sb-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;
+    margin: 12px 0;
+}
+.sb-price{
+    color: #BEAD8E;
+    &__big {
+        font-size: 32px;
+    }
+}
+.swiper {
+    z-index: 0;
+}
+.swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    background-image: url('../../img/prev.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper-button-prev::after {
+    display: none;
+  }
+.swiper-button-next {
+    width: 32px;
+    height: 32px;
+    background-image: url('../../img/next.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .swiper-button-next::after {
+    display: none;
+  }
+.slide-content{
+    z-index: 0;
+    width: 100%;
+    @media (min-width: $breakpoint) {
+        display: inline-block;
+        width: 60%;
     }
 }
