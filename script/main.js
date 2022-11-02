@@ -21,5 +21,9 @@ const swiper = new Swiper('.swiper', {
     },
     autoplay: {
         delay: 5000,
-    }
+    },
+    centeredSlides: true,
+    spaceBetween: 40,
+    slidesPerView: 'auto',
+    loopedSlides: 2,
 });
