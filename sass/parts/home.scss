@@ -314,7 +314,7 @@
     height: 440px;
     z-index: 1;
     @media (min-width: $breakpoint) {
-        height: 740px;
+        height: 700px;
     }
 }
 .swiper-slide {
@@ -378,6 +378,9 @@
         padding: 19px 24px;
         @media (min-width: $breakpoint) {
             top: 443px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
