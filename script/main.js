@@ -14,10 +14,6 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },  
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -25,8 +21,5 @@ const swiper = new Swiper('.swiper', {
     },
     autoplay: {
         delay: 5000,
-    },
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 40,
+    }
 });

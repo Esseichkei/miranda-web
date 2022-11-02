@@ -312,6 +312,41 @@
 .swiper {
     width: 100%;
     height: 440px;
+    z-index: 1;
+    @media (min-width: $breakpoint) {
+        height: 640px;
+    }
+}
+.swiper-slide {
+    @media (min-width: $breakpoint) {
+        width: 770px;
+        height: 500px;
+    }
+}
+.swiper-button-prev {
+    z-index: 4;
+    width: 32px;
+    height: 32px;
+    background-image: url('../../img/prev.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.swiper-button-prev::after {
+    display: none;
+}
+.swiper-button-next {
+    z-index: 4;
+    width: 32px;
+    height: 32px;
+    background-image: url('../../img/next.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+  
+.swiper-button-next::after {
+    display: none;
 }
 .slide-content {
     position: relative;
@@ -331,6 +366,9 @@
         top: 20px;
         left: 0;
         z-index: -1;
+        @media (min-width: $breakpoint) {
+            height: 550px;
+        }
     }
     &__body {
         position: relative;
@@ -339,6 +377,9 @@
         width: 335px;
         margin: 0 auto;
         padding: 19px 24px;
+        @media (min-width: $breakpoint) {
+            top: 443px;
+        }
     }
 }
 .iconrow-icon {
@@ -366,39 +407,5 @@
     color: #BEAD8E;
     &__big {
         font-size: 32px;
-    }
-}
-.swiper {
-    z-index: 0;
-}
-.swiper-button-prev {
-    width: 32px;
-    height: 32px;
-    background-image: url('../../img/prev.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .swiper-button-prev::after {
-    display: none;
-  }
-.swiper-button-next {
-    width: 32px;
-    height: 32px;
-    background-image: url('../../img/next.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .swiper-button-next::after {
-    display: none;
-  }
-.slide-content{
-    z-index: 0;
-    width: 100%;
-    @media (min-width: $breakpoint) {
-        display: inline-block;
-        width: 60%;
     }
 }

@@ -2,7 +2,7 @@
 
 .header {
     //display: none; // remove after footer is done lol
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,9 +29,10 @@
         height: 70px;
         background-color: #FFFFFF;
         @media (min-width: $breakpoint) {
-            position: relative;
-            top: -60px;
+            position: absolute;
+            top: 40px;
             width: 75%;
+            left: 12.5%;
             height: 120px;
         }
     }
@@ -49,12 +50,14 @@
             }
         }
         @media (min-width: $breakpoint) {
+            position: absolute;
             background-color: transparent;
-            z-index: 1;
+            z-index: 3;
             display: inline-block;
             width: 75%;
-            top: -300px;
-            left: 250px;
+            top: -80px;
+            left: 36%;
+            overflow: visible;
         }
     }
 }
