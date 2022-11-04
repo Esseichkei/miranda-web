@@ -314,7 +314,7 @@
     height: 440px;
     z-index: 1;
     @media (min-width: $breakpoint) {
-        height: 700px;
+        height: 715px;
     }
 }
 .swiper-slide {
@@ -410,4 +410,72 @@
     &__big {
         font-size: 32px;
     }
+}
+.video {
+    background-color: #222222;
+    padding: 48px 20px;
+    &__left {
+        text-align: left;
+        @media (min-width: $breakpoint) {
+            width: 40%;
+        }
+    }
+    &__right {
+        @media (max-width: $breakpoint) {
+            display: none;
+        }
+        width: 40%;
+        height: auto;
+    }
+    @media (min-width: $breakpoint) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: rgb(34,34,34);
+        background: linear-gradient(90deg, rgba(34,34,34,1) 70%, rgba(173,157,130,1) 70%);
+    }
+}
+.vl-small-title {
+    margin: 16px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #BDAC8D;
+}
+.vl-big-title {
+    margin: 17px 0;
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    color: #FFFFFF;
+    text-align: left;
+}
+.vl-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+    color: #C2C2C2;
+}
+.vl-video {
+    @media (min-width: $breakpoint) {
+        display: none;
+    }
+    margin: 32px 0;
+    width: 100%;
+    height: auto;
+}
+.vr-video {
+    width: 100%;
+    height: auto;
 }
