@@ -1,4 +1,6 @@
 // Initialize and add the map
+let map, infoWindow;
+
 function initMap() {
     // The location of Spain
     const spain = { lat: 40.416626636251564, lng: -3.703795052385254 }; // 40.416626636251564, -3.703795052385254
@@ -46,12 +48,45 @@ function initMap() {
       });
 
     // The map, centered at Spain
-    const map = new google.maps.Map(document.getElementById("map"), {
+    map = new google.maps.Map(document.getElementById("map"), {
       zoom: 6,
       center: spain,
     });
-    console.log(markers);
+    infoWindow = new google.maps.InfoWindow();
     const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
   }
   
   window.initMap = initMap;
+
+  function geolocate() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Location found.");
+          infoWindow.open(map);
+          map.setCenter(pos);
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        }
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  }
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(
+      browserHasGeolocation
+        ? "Error: The Geolocation service failed."
+        : "Error: Your browser doesn't support geolocation."
+    );
+    infoWindow.open(map);
+  }

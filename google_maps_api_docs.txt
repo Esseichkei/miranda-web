@@ -1,0 +1,7 @@
+Relevant docs for Google Maps API sprint:
+https://developers.google.com/maps/documentation/javascript/geometry
+https://developers.google.com/maps/documentation/javascript/libraries
+https://developers.google.com/maps/documentation/javascript/distancematrix
+https://developers.google.com/maps/documentation/javascript/geolocation
+https://developers.google.com/maps/documentation/javascript/geocoding
+https://developers.google.com/maps/documentation/javascript/examples/marker-symbol-custom
