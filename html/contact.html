@@ -9,17 +9,39 @@
         <link rel="stylesheet" href="../css/styles.css">
         <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
         <script src="../script/contact.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgVSfTatq1BQ-_pc5QJ1FiAixP4ggB9RY&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgVSfTatq1BQ-_pc5QJ1FiAixP4ggB9RY&callback=initMap&libraries=geometry"></script>
     </head>
     <body>
         <div id="map">
         </div>
         <button onClick="geolocate()">Geolocate!</button>
-        <input type="text" placeholder="address"/>
-        <button>Geocode!</button>
+        <input id="address" type="text" placeholder="address"/>
+        <button onClick="findAddress()">Geocode!</button>
         <button>Find closest hotel!</button>
+        <label for="region">Choose region!</label>
+        <select name="region" id="region" value="-1" onChange="changeRegion()">
+            <option value="-1">Region</option>
+            <option value="0">Andalucía</option>
+            <option value="1">Aragón</option>
+            <option value="2">Asturias</option>
+            <option value="3">Baleares</option>
+            <option value="4">Canarias</option>
+            <option value="5">Cantabria</option>
+            <option value="6">Castilla y León</option>
+            <option value="7">Castilla - La Mancha</option>
+            <option value="8">Cataluña</option>
+            <option value="9">Comunidad Valenciana</option>
+            <option value="10">Extremadura</option>
+            <option value="11">Galicia</option>
+            <option value="12">Madrid</option>
+            <option value="13">Murcia</option>
+            <option value="14">Navarra</option>
+            <option value="15">País Vasco</option>
+            <option value="16">La Rioja</option>
+            <option value="17">Ceuta</option>
+            <option value="18">Melilla</option>
+        </select>
         <div id="distances">
-
         </div>
     </body>
 </html>
