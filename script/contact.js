@@ -12426,7 +12426,7 @@ const hotels = [
   {lat: 43.537815598641814, lng: -5.65240095073395},
   {lat: 28.142736069506633, lng: -16.441781872862002}
 ];
-let map, infoWindow, userMarker, cluster, geocoder, userMarked, regions, markers;
+let map, infoWindow, userMarker, cluster, geocoder, userMarked, regions, markers, distanceService, distanceMatrix, chosenRegion = -1;
 
 function initMap() {
     markers = hotels.map((position, i) => {
@@ -12455,6 +12455,7 @@ function initMap() {
     infoWindow = new google.maps.InfoWindow();
     cluster = new markerClusterer.MarkerClusterer({ map, markers });
     geocoder = new google.maps.Geocoder();
+    distanceService = new google.maps.DistanceMatrixService();
 }
   
   window.initMap = initMap;
@@ -12507,11 +12508,11 @@ function initMap() {
   function addUserMarker(position) {
     if (userMarked === true)
       return;
-    let newMarker = new google.maps.Marker({
+    userMarker = new google.maps.Marker({
       position,
       label: "You"
     });
-    cluster.addMarker(newMarker);
+    cluster.addMarker(userMarker);
     userMarked = true;
   }
   function changeRegion() {
@@ -12519,7 +12520,7 @@ function initMap() {
       element.setMap(null);
     });
     cluster.clearMarkers();
-    const chosenRegion = Number(document.getElementById("region").value);
+    chosenRegion = Number(document.getElementById("region").value);
     if (chosenRegion === -1) {
       cluster.addMarkers(markers);
       return;
@@ -12528,4 +12529,32 @@ function initMap() {
     cluster.addMarkers(markers.filter((marker) => {
       return google.maps.geometry.poly.containsLocation(marker.getPosition(), regions[chosenRegion]);
     }))
+  }
+  function findDistances() {
+    if (userMarked !== true) {
+      console.error("User not found!");
+      return;
+    }
+    distanceService.getDistanceMatrix({
+      origins: [userMarker.getPosition()],
+      destinations: chosenRegion !== -1 ? [...markers.filter(marker => google.maps.geometry.poly.containsLocation(marker.getPosition(), regions[chosenRegion])).map(marker => marker.getPosition())] : markers.map(marker => marker.getPosition()),
+      travelMode: 'DRIVING'
+    }, (response, status) => {
+      if (status !== 'OK') {
+        console.error("Distance Matrix not available!");
+        return;
+      }
+      distanceMatrix = response.rows[0].elements.map((element, index) => {
+        return {origin: response.originAddresses[0],
+        destination: response.destinationAddresses[index],
+        distance: element.distance.value};
+      });
+      const distancesDiv = document.getElementById("distances");
+      distanceMatrix.sort((a, b) => a.distance - b.distance);
+      distanceMatrix.forEach((element) => {
+        const newRow = document.createElement("div");
+        newRow.innerText = `From ${element.origin} to ${element.destination}, the distance is ${element.distance / 1000} km.`;
+        distancesDiv.appendChild(newRow);
+      });
+    })
   }
