@@ -12553,6 +12553,9 @@ function initMap() {
       distanceMatrix.sort((a, b) => a.distance - b.distance);
       distanceMatrix.forEach((element) => {
         const newRow = document.createElement("div");
+        const att = document.createAttribute("class");
+        att.value = "distances__item";
+        newRow.setAttributeNode(att);
         newRow.innerText = `From ${element.origin} to ${element.destination}, the distance is ${element.distance / 1000} km.`;
         distancesDiv.appendChild(newRow);
       });
