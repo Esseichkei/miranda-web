@@ -7,7 +7,8 @@ for file in scssFiles:
         content = styleFile.read()
         content = content.replace('../_sass/_', '')
         styleFile.seek(0, 0)
-        styleFile.write('---\n---\n\n$baseurl:"{{ site.baseurl }}";\n')
+        if (content.find('---\n---\n\n$baseurl:"{{ site.baseurl }}";\n') == -1):
+            styleFile.write('---\n---\n\n$baseurl:"{{ site.baseurl }}";\n')
         styleFile.write(content)
         print(str(file) + ' updated')
 scssPartialDir = Path('./_sass')
