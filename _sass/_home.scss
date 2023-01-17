@@ -236,10 +236,10 @@
     vertical-align: top;
 }
 .ui-img-1 {
-    background-image: url("./img/strong-team.jpg");
+    background-image: url($baseurl + "/img/strong-team.jpg");
 }
 .ui-img-2 {
-    background-image: url("./img/luxury-room.jpg");
+    background-image: url($baseurl + "/img/luxury-room.jpg");
     @media (min-width: $breakpoint) {
         margin-bottom: 30px;
     }
@@ -271,7 +271,7 @@
 .ui-body-1 {
     background-color: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(34, 34, 34, 0.02);
-    background-image: url("./img/team-bg.svg");
+    background-image: url($baseurl + "/img/team-bg.svg");
     background-size: 144px 106px;
     background-repeat: no-repeat;
     background-position: 100% 26%;
@@ -326,7 +326,7 @@
     z-index: 4;
     width: 32px;
     height: 32px;
-    background-image: url('./img/prev.svg');
+    background-image: url($baseurl + "/img/prev.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -338,7 +338,7 @@
     z-index: 4;
     width: 32px;
     height: 32px;
-    background-image: url('./img/next.svg');
+    background-image: url($baseurl + "/img/next.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

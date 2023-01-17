@@ -1,7 +1,6 @@
 @import 'vars';
 
 .header {
-    //display: none; // remove after footer is done lol
     z-index: 2;
     position: fixed;
     top: 0;
@@ -53,7 +52,7 @@
             position: absolute;
             background-color: transparent;
             z-index: 3;
-            display: none;
+            //display: none;
             width: 75%;
             top: -80px;
             left: 36%;
@@ -79,7 +78,7 @@
     vertical-align: top;
 }
 .header-hamburger {
-    background-image:url("./img/hamburger.svg");
+    background-image:url($baseurl + "/img/hamburger.svg");
     background-size: cover;
     background-color: transparent;
     height: 16px;
@@ -89,7 +88,7 @@
     border-width: 0px;
     display: inline-block;
     &--open {
-        background-image:url("./img/cross.svg");
+        background-image:url($baseurl + "/img/cross.svg");
     }
     @media (min-width: $breakpoint) {
         display: none;
@@ -119,7 +118,7 @@
     }
 }
 .header-login {
-    background-image: url("./img/login.svg");
+    background-image: url($baseurl + "/img/login.svg");
     background-size: cover;
     background-color: transparent;
     height: 24px;
@@ -137,7 +136,7 @@
     }
 }
 .header-search {
-    background-image: url("./img/search.svg");
+    background-image: url($baseurl + "/img/search.svg");
     background-size: cover;
     background-color: transparent;
     height: 24px;
