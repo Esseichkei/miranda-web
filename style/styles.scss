@@ -1,10 +1,10 @@
 ---
 ---
 
-@import '../_sass/header.scss';
-@import '../_sass/footer.scss';
-@import '../_sass/home.scss';
-@import '../_sass/contact.scss';
+@import 'header';
+@import 'footer';
+@import 'home';
+@import 'contact';
 
 html, * {
     box-sizing: border-box;
