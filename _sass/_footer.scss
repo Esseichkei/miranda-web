@@ -1,7 +1,7 @@
 @import 'vars';
 
 .footer {
-    background-image: url("../img/footer_bg.svg");
+    background-image: url("./img/footer_bg.svg");
     width: 100%;
     &__body {
         padding: 20px;
@@ -76,19 +76,19 @@
     }
 }
 .icon-fb {
-    background-image: url("../img/facebook.svg");
+    background-image: url("./img/facebook.svg");
 }
 .icon-tw {
-    background-image: url("../img/twitter.svg");
+    background-image: url("./img/twitter.svg");
 }
 .icon-be {
-    background-image: url("../img/be_icon.svg");
+    background-image: url("./img/be_icon.svg");
 }
 .icon-li {
-    background-image: url("../img/linkedin.svg");
+    background-image: url("./img/linkedin.svg");
 }
 .icon-yt {
-    background-image: url("../img/youtube.svg");
+    background-image: url("./img/youtube.svg");
 }
 .fsections{
     &__services{
