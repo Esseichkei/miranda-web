@@ -30,8 +30,8 @@ swapFiles = chain(htmlFiles, phpFiles)
 for file in swapFiles:
     with file.open('r+', encoding="utf-8") as partialFile:
         content = partialFile.read()
-        content = content.replace('href="./css/',
-            'href="./style/')
+        content = content.replace('/css/',
+            '/style/')
         partialFile.seek(0, 0)
         partialFile.write(content)
         print(str(file) + ' updated')

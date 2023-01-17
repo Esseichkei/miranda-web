@@ -31,11 +31,11 @@ htmlFiles = baseDir.rglob('*.html')
 phpFiles = baseDir.rglob('*.php')
 swapFiles = chain(htmlFiles, phpFiles)
 for file in swapFiles:
-    with file.open('r+', encoding="utf-8") as partialFile:
-        content = partialFile.read()
-        content = content.replace('href="./style/',
-            'href="./css/')
-        partialFile.seek(0, 0)
-        partialFile.write(content)
+    with file.open('r+', encoding="utf-8") as swapFile:
+        content = swapFile.read()
+        content = content.replace('/style/',
+            '/css/')
+        swapFile.seek(0, 0)
+        swapFile.write(content)
         print(str(file) + ' updated')
 # TODO fix end of file duplication bug on unprepping
