@@ -1,5 +1,6 @@
 from pathlib import Path
 from itertools import chain
+
 scssDir = Path('./style')
 scssFiles = scssDir.glob('*.scss')
 for file in scssFiles:
@@ -11,6 +12,7 @@ for file in scssFiles:
             styleFile.write('---\n---\n\n$baseurl:"{{ site.baseurl }}";\n')
         styleFile.write(content)
         print(str(file) + ' updated')
+
 scssPartialDir = Path('./_sass')
 scssPartialFiles = scssPartialDir.glob('*.scss')
 for file in scssPartialFiles:
@@ -20,6 +22,7 @@ for file in scssPartialFiles:
         partialFile.seek(0, 0)
         partialFile.write(content)
         print(str(file) + ' updated')
+
 baseDir = Path('.')
 htmlFiles = baseDir.rglob('*.html')
 phpFiles = baseDir.rglob('*.php')
