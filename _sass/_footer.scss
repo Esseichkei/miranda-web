@@ -88,7 +88,7 @@
     background-image: url("../../img/linkedin.svg");
 }
 .icon-yt {
-    background-image: url("youtube.svg");
+    background-image: url($baseurl + "/img/youtube.svg");
 }
 .fsections{
     &__services{
